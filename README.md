@@ -8,50 +8,97 @@ A world-class educational platform featuring AI tutors, interactive simulations,
 ![Node](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)
 ![React](https://img.shields.io/badge/react-18.2.0-blue)
 
-## 🚀 Quick Start (Local Network - No Domain Needed)
+## 🚀 Quick Start
+
+### Option 1: Local Development
 ```bash
-# 1. Clone repository
-git clone https://github.com/YOURUSERNAME/quantumrise.git
-cd quantumrise
+# Clone repository
+git clone https://github.com/bmarimuthu-docker/RISE-Fondation.git
+cd RISE-Fondation
 
-# 2. Run setup script
-chmod +x setup-local.sh
-./setup-local.sh
+# Backend setup
+cd backend && npm install && cp .env.example .env
+# Edit .env with your database credentials
+npm run migrate && npm run seed && npm run dev
 
-# 3. Access from any device on your network
-# Open browser: http://YOUR_PI_IP:3000
+# Frontend setup (new terminal)
+cd frontend && npm install && npm run dev
 ```
+
+### Option 2: Docker Deployment
+```bash
+docker-compose up -d
+```
+
+See [SETUP.md](SETUP.md) for detailed instructions.
 
 ## ✨ Features
 
-- 🎓 20+ interactive lessons across 5 subjects
-- 🤖 AI tutor powered by Claude API
-- 📊 Progress tracking with XP and badges
-- 🎮 Gamified learning experience
-- 🌙 Dark mode support
-- 📱 Mobile responsive
-- 🔒 Secure authentication
-- 📧 Email notifications
-- 👨‍💼 Admin panel
+- 🎓 **20+ interactive lessons** across 5 subjects
+- 🤖 **AI tutor** powered by Claude API (24/7 learning assistance)
+- 📊 **Progress tracking** with XP and badges
+- 🎮 **Gamified learning** experience
+- 🌙 **Dark mode** with modern UI
+- 📱 **Mobile responsive** design
+- 🔒 **Secure authentication** with JWT
+- 📧 **Email notifications** (ready to integrate)
+- 👨‍💼 **Admin panel** for content management
+- 🚀 **Optimized performance** with Vite
 
-## 📚 Documentation
+## 📚 5 Core Disciplines
 
-- [Local Setup Guide](docs/local-setup.md)
-- [Production Setup Guide](docs/production-setup.md)
-- [API Documentation](docs/api-docs.md)
+1. **Mathematics** - Algebra, Equations, Calculus
+2. **Physics** - Force, Motion, Quantum Mechanics  
+3. **Computer Science** - Programming, Web Dev, Algorithms
+4. **Engineering** - Robotics, Design, Systems
+5. **Electronics** - Circuits, Microcontrollers, Hardware
 
 ## 🛠 Tech Stack
 
-**Frontend:** React 18, Vite, Tailwind CSS
-**Backend:** Node.js, Express, PostgreSQL
-**AI:** Anthropic Claude API
-**Deployment:** Raspberry Pi 5 (8GB)
+**Frontend:**
+- React 18
+- Vite
+- Tailwind CSS
+- React Router v6
+- Lucide Icons
+
+**Backend:**
+- Node.js (v20+)
+- Express.js
+- PostgreSQL
+- JWT Authentication
+- bcryptjs Password Hashing
+
+**AI:**
+- Anthropic Claude API
+- Natural language Q&A
+
+**Deployment:**
+- Raspberry Pi 5 (8GB)
+- Docker support
+- Vercel/Netlify ready
+
+## 📖 Documentation
+
+- **[Setup Guide](SETUP.md)** - How to set up the project
+- **[Project Overview](docs/PROJECT.md)** - Detailed project info
+- **[Frontend Guide](docs/FRONTEND.md)** - Frontend development
+- **[Backend Guide](docs/BACKEND.md)** - Backend API documentation
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Production deployment
 
 ## 📝 License
 
-MIT License - see LICENSE file
+MIT License - see [LICENSE](LICENSE) file for details
 
 ## 🙏 Acknowledgments
 
-- Luiz Guzman / System Tech Works LLC - Raspberry Pi & Arduino modules
-- Anthropic Claude API - AI Tutor functionality
+- **Luiz Guzman / System Tech Works LLC** - Raspberry Pi & Arduino modules
+- **Anthropic Claude** - AI Tutor functionality
+- **React Team** - Frontend framework
+- **Node.js Community** - Backend runtime
+
+---
+
+**Built with ❤️ for Quantum Rise Foundation**
+
+Last Updated: November 2024
